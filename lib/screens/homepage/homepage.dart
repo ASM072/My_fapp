@@ -4,6 +4,7 @@ import 'package:my_fapp/screens/homepage/homepage.dart';
 import 'package:my_fapp/svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_fapp/appColors/app_colors.dart';
+import 'package:my_fapp/widgets/showallwidget.dart';
 
 
 class Homepage extends StatelessWidget {
@@ -85,12 +86,23 @@ class Homepage extends StatelessWidget {
     appBar: buildAppBar(),
     body: TabBarView(
       children: [
+
+        ListView(
+          physics: BouncingScrollPhysics(),
+          children: [
+            ShowAllWidget(
+              leftText: "New Arrival",
+            ),
+          ],
+        ),
+
+
         Center(child: Text("1Page")),
         Center(child: Text("2Page")),
         Center(child: Text("3Page")),
         Center(child: Text("4Page")),
-      ]
-    )
+      ],
+    ),
     ),
     );
   }
