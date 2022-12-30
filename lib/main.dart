@@ -1,3 +1,5 @@
+
+import 'package:my_fapp/bottombar/bottombar.dart';
 import 'package:flutter/material.dart';
 import 'package:my_fapp/screens/login_screen/login_screen.dart';
 import 'package:my_fapp/screens/signup/signup.dart';
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-    home:  Homepage(),
+    home:  BottomBar(),
     );
   }
 }
