@@ -5,6 +5,10 @@ import 'package:my_fapp/svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_fapp/appColors/app_colors.dart';
 import 'package:my_fapp/widgets/showallwidget.dart';
+import 'package:my_fapp/data/homepagedata.dart';
+import 'package:my_fapp/models/singleproductmodel.dart';
+import 'package:my_fapp/widgets/singleproductwidget.dart';
+
 
 
 class Homepage extends StatelessWidget {
@@ -73,11 +77,21 @@ class Homepage extends StatelessWidget {
           ),
         onPressed: ( ){},
         ),
-      ]
-
+      ],
     );
   }
-  
+
+buildAdvertisementPlace(){
+  return Padding(
+
+    padding: EdgeInsets.all(18.0),
+    child: Container(
+      height: 170,
+      child: 
+    )
+    )
+}
+
   @override
   Widget build(BuildContext context){
     return DefaultTabController(
@@ -90,13 +104,37 @@ class Homepage extends StatelessWidget {
         ListView(
           physics: BouncingScrollPhysics(),
           children: [
+           // buildAdvertisementPlace(),
             ShowAllWidget(
               leftText: "New Arrival",
             ),
+            Padding(padding: EdgeInsets.symmetric(horizontal: 12.0, 
+            ),
+            child: GridView.builder(
+                    shrinkWrap: true,
+                    primary: true,
+                    itemCount: singleProductData.length,
+                    physics: NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: 0.7,
+                    ),
+             itemBuilder: (context, index){
+              var data = singleProductData[index];
+              return Singleproductwidget(
+                onPressed: (){},
+                productImage: data.productImage,
+                productModel: data.productModel,
+                productName: data.productName,
+                productOldPrice: data.productOldPrice,
+                productPrice: data.productPrice,
+
+              );
+             },
+             )
+            ),
           ],
         ),
-
-
         Center(child: Text("1Page")),
         Center(child: Text("2Page")),
         Center(child: Text("3Page")),
