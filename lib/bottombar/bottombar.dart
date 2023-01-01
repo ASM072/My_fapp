@@ -12,6 +12,14 @@ import 'package:my_fapp/svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_fapp/widgets/Mybuttonwidget.dart';
 import 'package:my_fapp/screens/homepage/homepage.dart';
+import 'package:custom_navigation_bar/custom_navigation_bar.dart';
+import 'package:custom_navigator/custom_navigator.dart';
+import 'package:custom_navigator/custom_scaffold.dart';
+import 'package:my_fapp/screens/categoryscreen/categoryscreen.dart';
+
+
+
+
 
 
 
@@ -26,7 +34,9 @@ class _BottomBarState extends State<BottomBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
+    //Homepage Call on Background
     Homepage(),
+    CategoryScreen(),
     Text(
       'Index 1: Grid View',
       style: optionStyle,
@@ -53,8 +63,10 @@ class _BottomBarState extends State<BottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-  
+    return CustomScaffold(
+      children: _widgetOptions,
+      onItemTap: _onItemTapped,
+      scaffold: Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -86,9 +98,13 @@ class _BottomBarState extends State<BottomBar> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: AppColors.baseDarkPinkColor,
+        selectedIconTheme: IconThemeData(
+          color: AppColors.baseDarkPinkColor
+        ),
+        // selectedItemColor: AppColors.baseDarkPinkColor,
         onTap: _onItemTapped,
       ),
+    ),
     );
   }
 }

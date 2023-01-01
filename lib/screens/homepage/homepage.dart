@@ -9,8 +9,9 @@ import 'package:my_fapp/data/homepagedata.dart';
 import 'package:my_fapp/models/singleproductmodel.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:my_fapp/widgets/singleproductwidget.dart';
-
-
+import 'package:my_fapp/screens/tabbar/tabbardata.dart';
+import 'package:my_fapp/screens/detailscreen/detailscreen.dart';
+import 'package:my_fapp/routes/routes.dart';
 
 class Homepage extends StatelessWidget {
   
@@ -210,18 +211,25 @@ Widget buildAdvertisementPlace(){
           Padding(padding: EdgeInsets.symmetric(horizontal: 12.0, 
             ),
             child: GridView.builder(
-                    shrinkWrap: true,
-                    primary: true,
-                    itemCount: singleProductData.length,
-                    physics: NeverScrollableScrollPhysics(),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 0.7,
-                    ),
+                shrinkWrap: true,
+                primary: true,
+                itemCount: singleProductData.length,
+                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 0.7,
+                ),
              itemBuilder: (context, index){
               var data = singleProductData[index];
               return Singleproductwidget(
-                onPressed: (){},
+                onPressed: (){
+                  PageRouting.goToNextPage(
+                    context: context,
+                    navigateTo: DetailScreen(
+                      data: data,
+                    ),
+                  );
+                },
                 productImage: data.productImage,
                 productModel: data.productModel,
                 productName: data.productName,
@@ -265,21 +273,27 @@ Widget buildAdvertisementPlace(){
                   leftText: "History",
                 ),
                 Container(
-                  height: 240,
+                  height: 400,
                   child: GridView.builder(
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
                     primary: true,
                     itemCount: singleProductData.length,
-
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 1,
+                      crossAxisCount: 2,
                       childAspectRatio: 1.5
                     ),
                     itemBuilder: (context, index){
                       var data = singleProductData[index];
                       return Singleproductwidget(
-                      onPressed: (){},
+                      onPressed: (){
+                        PageRouting.goToNextPage(
+                          context: context,
+                          navigateTo: DetailScreen(
+                            data: data,
+                          ),
+                        );
+                      },
                       productImage: data.productImage,
                       productModel: data.productModel,
                       productName: data.productName,
@@ -292,10 +306,15 @@ Widget buildAdvertisementPlace(){
                 )
           ],
         ),
-        Center(child: Text("1Page")),
-        Center(child: Text("2Page")),
-        Center(child: Text("3Page")),
-        Center(child: Text("4Page")),
+        TabBarData(
+          productData: clothsData,
+        ),
+        TabBarData(
+          productData: shoesData,
+        ),
+        TabBarData(
+          productData: accessoriesData,
+        ),
       ],
     ),
     ),

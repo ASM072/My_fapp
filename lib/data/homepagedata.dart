@@ -15,7 +15,7 @@ List<SingleProductModel> singleProductData = [
   ),
   SingleProductModel(
     productImage:
-        'https://assets.adidas.com/images/w_600,f_auto,q_auto/a143c8a9b9df4d1fb8faaaf600c68fce_9366/Essentials_Linear_Pants_Grey_FM6805_21_model.jpg',
+        'https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b4e45c8aed6149aa9b35aeec00b2d199_9366/tiro-23-pro-shorts.jpg',
     productModel: 'Hoodies',
     productName: 'Essentials Linear',
     productOldPrice: 80,
@@ -26,7 +26,7 @@ List<SingleProductModel> singleProductData = [
   ),
   SingleProductModel(
     productImage:
-        'https://assets.adidas.com/images/w_600,f_auto,q_auto/8659b39db18f46b9b913ab8300a8619f_9366/Own_the_Run_Tee_Black_FS9799_21_model.jpg',
+        'https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b4e45c8aed6149aa9b35aeec00b2d199_9366/tiro-23-pro-shorts.jpg',
     productModel: 'T-Shirt',
     productName: 'Own The Run Tee',
     productOldPrice: 60,
@@ -38,12 +38,12 @@ List<SingleProductModel> singleProductData = [
  
   SingleProductModel(
     productImage:
-        'https://assets.adidas.com/images/w_600,f_auto,q_auto/5ab31ab543704cb8a8d2a88700cfb627_9366/Ultimate365_Shorts_Grey_CE0447_21_model.jpg',
+        'https://assets.adidas.com/images/w_600,f_auto,q_auto/5bfdde80122c4b498c7cadbf00ebc5ce_9366/Tiro_Essentials_Shorts_Black_HE7164_21_model.jpg',
     productModel: 'Shorts',
     productName: 'Ultimate 365',
     productOldPrice: 75,
     productPrice: 50,
-    productFourImage: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/04d68f347c284e0eab0aa8630173a44a_9366/Ultimate365_Shorts_Grey_CD9875.jpg',
+    productFourImage: '',
     productSecondImage: 'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/ac3e253fbd23450f95cfa8c1000d9ab5_9366/Ultimate365_Shorts_Grey_CE0448_21_model.jpg',
     productThirdImage: 'https://images.sportsdirect.com/images/products/36700402_l_a1.jpg'
   ),
@@ -60,14 +60,14 @@ List<SingleProductModel> singleProductData = [
   ),
   SingleProductModel(
     productImage:
-        'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/954fbe41c9b444859004ab260121a23f_9366/Floral_Track_Jacket_Black_GE0314_21_model.jpg',
+        'https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b4e45c8aed6149aa9b35aeec00b2d199_9366/tiro-23-pro-shorts.jpg',
     productModel: 'Jackets',
     productName: 'Floral Track',
     productOldPrice: 140,
     productPrice: 99,
-     productFourImage: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/482aaea14d614549bbb9ab1a0115f306_9366/Floral_Track_Jacket_Black_GE0314_02_laydown.jpg',
-    productSecondImage: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/7fdea46b36f542bbbe12ab260127b2cc_9366/Floral_Track_Jacket_Black_GE0314.jpg',
-    productThirdImage: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/df298ef311c0490cb84eab260124bea5_9366/Floral_Track_Jacket_Black_GE0314_23_hover_model.jpg'
+     productFourImage: '',
+    productSecondImage: '',
+    productThirdImage: ''
   ),
   SingleProductModel(
     productImage:
@@ -93,7 +93,7 @@ List<SingleProductModel> singleProductData = [
   ),
 ];
 ////////////////////////////// Cloths.............
-List<SingleProductModel> colothsData = [
+List<SingleProductModel> clothsData = [
   SingleProductModel(
     
     productImage:
@@ -188,7 +188,7 @@ List<SingleProductModel> colothsData = [
 List<SingleProductModel> shoesData = [
   SingleProductModel(
     productImage:
-        'https://assets.reebok.com/images/w_600,f_auto,q_auto/284a6dbadf75425fa1dbacfd00767fdd_9366/Nano_X1_Lux_Shoes_White_FZ1418_02_standard.jpg',
+        'https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b4e45c8aed6149aa9b35aeec00b2d199_9366/tiro-23-pro-shorts.jpg',
     productModel: 'Men Cross Training',
     productName: 'Nano x1 lux',
     productOldPrice: 180,

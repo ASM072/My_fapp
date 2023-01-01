@@ -12,6 +12,7 @@ import 'package:my_fapp/svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_fapp/widgets/Mybuttonwidget.dart';
 import 'package:my_fapp/screens/homepage/homepage.dart';
+import 'package:my_fapp/screens/detailscreen/detailscreen.dart';
 
 
 
