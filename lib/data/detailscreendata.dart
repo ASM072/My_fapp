@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:my_fapp/styles/homepagestyle.dart';
-import 'package:my_fapp/styles/detailscreenstyles.dart';
-import 'package:my_fapp/screens/homepage/homepage.dart';
-import 'package:my_fapp/svgimages/svg_images.dart';
+import '../styles/homepagestyle.dart';
+import '../styles/detailscreenstyles.dart';
+import '../screens/homepage/homepage.dart';
+import '../svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_fapp/appColors/app_colors.dart';
-import 'package:my_fapp/widgets/showallwidget.dart';
-import 'package:my_fapp/data/homepagedata.dart';
-import 'package:my_fapp/models/singleproductmodel.dart';
+import '../appColors/app_colors.dart';
+import '../widgets/showallwidget.dart';
+import 'homepagedata.dart';
+import '../models/singleproductmodel.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:my_fapp/widgets/singleproductwidget.dart';
-import 'package:my_fapp/widgets/dropdownbuttonwidget.dart';
-import 'package:my_fapp/screens/tabbar/tabbardata.dart';
-import 'package:my_fapp/routes/routes.dart';
+import '../widgets/singleproductwidget.dart';
+import '../widgets/dropdownbuttonwidget.dart';
+import '../screens/tabbar/tabbardata.dart';
+import '../routes/routes.dart';
 
 
 List<SingleProductModel> detailScreenData = [

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_fapp/widgets/Mybuttonwidget.dart';
-import 'package:my_fapp/appColors/app_colors.dart';
-import 'package:my_fapp/widgets/textfromfieldwidget.dart';
-import 'package:my_fapp/styles/login_screenstyle.dart';
-import 'package:my_fapp/svgimages/svg_images.dart';
-import 'package:my_fapp/widgets/Mybuttonwidget.dart';
+import '../../widgets/Mybuttonwidget.dart';
+import '../../appColors/app_colors.dart';
+import '../../widgets/textfromfieldwidget.dart';
+import '../../styles/login_screenstyle.dart';
+import '../../svgimages/svg_images.dart';
+import '../../widgets/Mybuttonwidget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_fapp/styles/signupscreenstyle.dart';
+import '../../styles/signupscreenstyle.dart';
 
 class Signup extends StatelessWidget {
 

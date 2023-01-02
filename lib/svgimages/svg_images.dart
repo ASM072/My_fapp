@@ -6,4 +6,6 @@ class SvgImages{
   static String search="images/Search.svg";
   static String heart="images/Heart.svg";
   static String upload="images/Upload.svg";
+  static String delete = "images/Trash.svg";
+
  }

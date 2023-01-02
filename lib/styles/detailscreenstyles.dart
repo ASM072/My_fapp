@@ -1,4 +1,4 @@
-import 'package:my_fapp/appColors/app_colors.dart';
+import '../appColors/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 
 class DetailScreenStyles{

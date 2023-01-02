@@ -15,6 +15,7 @@ import 'package:my_fapp/widgets/singleproductwidget.dart';
 import 'package:my_fapp/data/detailscreendata.dart';
 import 'package:my_fapp/data/homepagedata.dart';
 import 'package:my_fapp/screens/tabbar/categorytabbar/categorymantabbar.dart';
+import 'package:my_fapp/screens/yourbag/youbagscreen.dart';
 
 
 class SubCategory extends StatefulWidget {
@@ -108,6 +109,7 @@ class _SubCategoryState extends State<SubCategory> {
                       ),
                     ),
                     Expanded(
+                      flex: 2,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [

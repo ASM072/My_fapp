@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:my_fapp/styles/homepagestyle.dart';
-import 'package:my_fapp/screens/homepage/homepage.dart';
-import 'package:my_fapp/svgimages/svg_images.dart';
+import '../../styles/homepagestyle.dart';
+import '../homepage/homepage.dart';
+import '../../svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_fapp/appColors/app_colors.dart';
-import 'package:my_fapp/widgets/showallwidget.dart';
-import 'package:my_fapp/data/homepagedata.dart';
+import '../../appColors/app_colors.dart';
+import '../../widgets/showallwidget.dart';
+import '../../data/homepagedata.dart';
 import 'package:my_fapp/models/singleproductmodel.dart';
 import 'package:my_fapp/widgets/singleproductwidget.dart';
+import 'package:my_fapp/screens/categoryscreen/categoryscreen.dart';
+import '../../bottombar/bottombar.dart';
+import 'package:my_fapp/routes/routes.dart';
+import 'package:my_fapp/screens/detailscreen/detailscreen.dart';
+import 'package:my_fapp/styles/subcategorystyles.dart';
 
 
 class TabBarData extends StatelessWidget {
   final List<SingleProductModel> productData;
   //final List<CategoryProductModel> categoryProductData;
-  TabBarData({required this.productData, /*this.categoryProductData*/});
+  TabBarData({required this.productData, /*required this.categoryProductData*/});
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -27,10 +32,10 @@ class TabBarData extends StatelessWidget {
         var data = productData[index];
         return Singleproductwidget(
           onPressed: () {
-            // PageRouting.goToNextPage(
-            //   context: context,
-            //   navigateTo: DetailScreen(data: data),
-            // );
+            PageRouting.goToNextPage(
+              context: context,
+              navigateTo: DetailScreen(data: data),
+            );
           },
           productImage: data.productImage,
           productModel: data.productModel,

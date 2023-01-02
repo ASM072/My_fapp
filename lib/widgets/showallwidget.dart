@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_fapp/appColors/app_colors.dart';
+import '../appColors/app_colors.dart';
 
 
 class ShowAllWidget extends StatelessWidget {

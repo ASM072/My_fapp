@@ -1,4 +1,4 @@
-import 'package:my_fapp/models/singleproductmodel.dart';
+import '../models/singleproductmodel.dart';
 import 'package:flutter/material.dart';
 
 List<SingleProductModel> singleProductData = [

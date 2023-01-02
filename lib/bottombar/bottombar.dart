@@ -1,25 +1,22 @@
 
-import 'package:my_fapp/bottombar/bottombar.dart';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:my_fapp/screens/login_screen/login_screen.dart';
-import 'package:my_fapp/screens/signup/signup.dart';
-import 'package:flutter/material.dart';
-import 'package:my_fapp/widgets/Mybuttonwidget.dart';
-import 'package:my_fapp/appColors/app_colors.dart';
-import 'package:my_fapp/widgets/textfromfieldwidget.dart';
-import 'package:my_fapp/styles/login_screenstyle.dart';
-import 'package:my_fapp/svgimages/svg_images.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_fapp/widgets/Mybuttonwidget.dart';
-import 'package:my_fapp/screens/homepage/homepage.dart';
-import 'package:custom_navigation_bar/custom_navigation_bar.dart';
+import 'package:my_fapp/screens/yourbag/youbagscreen.dart';
 import 'package:custom_navigator/custom_navigator.dart';
 import 'package:custom_navigator/custom_scaffold.dart';
-import 'package:my_fapp/screens/categoryscreen/categoryscreen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-
-
-
+import '../appColors/app_colors.dart';
+import 'bottombar.dart';
+import 'package:my_fapp/screens/login_screen/login_screen.dart';
+import '../screens/categoryscreen/categoryscreen.dart';
+import '../screens/homepage/homepage.dart';
+import '../styles/login_screenstyle.dart';
+import '../svgimages/svg_images.dart';
+import '../widgets/Mybuttonwidget.dart';
+import '../widgets/textfromfieldwidget.dart';
+import 'package:my_fapp/screens/categoryscreen/subcategoryscreen.dart';
 
 
 
@@ -37,14 +34,7 @@ class _BottomBarState extends State<BottomBar> {
     //Homepage Call on Background
     Homepage(),
     CategoryScreen(),
-    Text(
-      'Index 1: Grid View',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Cart',
-      style: optionStyle,
-    ),
+    YourBagScreen(),
     Text(
       'Index 3: Favorites',
       style: optionStyle,
@@ -63,48 +53,54 @@ class _BottomBarState extends State<BottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
+    return 
+    CustomScaffold(
       children: _widgetOptions,
       onItemTap: _onItemTapped,
-      scaffold: Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        unselectedItemColor: AppColors.baseGrey40Color,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: '',
+         scaffold: Scaffold(
+          body: Center(
+            child: _widgetOptions.elementAt(_selectedIndex),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.grid_view),
-            label: '',
+            bottomNavigationBar: BottomNavigationBar(
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            unselectedFontSize: 0.0,
+            selectedFontSize: 0.0,
+            type: BottomNavigationBarType.fixed,
+            unselectedItemColor: AppColors.baseGrey40Color,
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.grid_view),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart_outlined),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.favorite_border),
+                label: '',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: '',
+              ),
+            ],
+              currentIndex: _selectedIndex,
+              selectedIconTheme: IconThemeData(
+              color: AppColors.baseDarkPinkColor,
+             ),
+            //selectedItemColor: AppColors.baseDarkPinkColor,
+            onTap: _onItemTapped,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: '',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedIconTheme: IconThemeData(
-          color: AppColors.baseDarkPinkColor
-        ),
-        // selectedItemColor: AppColors.baseDarkPinkColor,
-        onTap: _onItemTapped,
-      ),
-    ),
-    );
+             // ),
+           ),
+       );
   }
 }
+
+

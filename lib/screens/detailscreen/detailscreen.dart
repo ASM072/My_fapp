@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:my_fapp/styles/homepagestyle.dart';
-import 'package:my_fapp/styles/detailscreenstyles.dart';
-import 'package:my_fapp/screens/homepage/homepage.dart';
-import 'package:my_fapp/svgimages/svg_images.dart';
+import '../../styles/homepagestyle.dart';
+import '../../styles/detailscreenstyles.dart';
+import '../homepage/homepage.dart';
+import '../../svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_fapp/appColors/app_colors.dart';
-import 'package:my_fapp/widgets/showallwidget.dart';
-import 'package:my_fapp/data/homepagedata.dart';
-import 'package:my_fapp/models/singleproductmodel.dart';
+import '../../appColors/app_colors.dart';
+import '../../widgets/showallwidget.dart';
+import '../../data/homepagedata.dart';
+import '../../models/singleproductmodel.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:my_fapp/widgets/singleproductwidget.dart';
-import 'package:my_fapp/widgets/dropdownbuttonwidget.dart';
-import 'package:my_fapp/screens/tabbar/tabbardata.dart';
-import 'package:my_fapp/routes/routes.dart';
-import 'package:my_fapp/data/detailscreendata.dart';
+import '../../widgets/singleproductwidget.dart';
+import '../../widgets/dropdownbuttonwidget.dart';
+import '../tabbar/tabbardata.dart';
+import '../../routes/routes.dart';
+import '../../data/detailscreendata.dart';
 
 
 class DetailScreen extends StatefulWidget {
@@ -113,232 +113,6 @@ class _DetailScreenState extends State<DetailScreen> {
   //   );
   // }
 
-  // buildProductImages() {
-  //   return Padding(
-  //     padding: EdgeInsets.all(8.0),
-  //     child: Column(
-  //       children: [
-  //         ClipRRect(
-  //           borderRadius: BorderRadius.circular(10.0),
-  //           child: Image.network(
-  //             widget.data.productImage,
-  //             fit: BoxFit.cover,
-  //           ),
-  //         ),
-  //         Row(
-  //           children: [
-  //             Expanded(
-  //               child: Container(
-  //                 margin: EdgeInsets.only(right: 15, top: 15),
-  //                 child: Image.network(widget.data.productSecondImage),
-  //               ),
-  //             ),
-  //             Expanded(
-  //               child: Container(
-  //                 margin: EdgeInsets.only(right: 15, top: 15),
-  //                 child: Image.network(widget.data.productThirdImage),
-  //               ),
-  //             ),
-  //             Expanded(
-  //               child: Container(
-  //                 margin: EdgeInsets.only(right: 15, top: 15),
-  //                 child: Image.network(widget.data.productFourImage),
-  //               ),
-  //             ),
-  //           ],
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
-
-  // buildColorsAndSize() {
-  //   return Row(
-  //     children: [
-  //       Expanded(
-  //         child: DropDownButtonWidget(
-  //           hintText: "Color",
-  //           item: ["red", "blue", "white", "black", "pink"],
-  //           ratingController: _ratingController,
-  //         ),
-  //       ),
-  //       Expanded(
-  //         child: DropDownButtonWidget(
-  //           hintText: "Size",
-  //           item: ["25", "30", "35", "40", "45"],
-  //           ratingController: _sizeController,
-  //         ),
-  //       )
-  //     ],
-  //   );
-  // }
-
-  // buildExpensionTileRow({String firstTitle, String secTitle}) {
-  //   return Row(
-  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //     children: [
-  //       Text(
-  //         firstTitle,
-  //         // ".\t\tMaterial",
-  //         style: TextStyle(
-  //           fontSize: 18.60,
-  //         ),
-  //       ),
-  //       Text(
-  //         secTitle,
-  //         // "84%\tnylon",
-  //         style: TextStyle(
-  //           fontSize: 18.60,
-  //         ),
-  //       ),
-  //     ],
-  //   );
-  // }
-
-  // buildExpensionTile() {
-  //   return ExpansionTile(
-  //     title: Text(
-  //       "Description",
-  //       style: DetailScreenStyles.descriptionTextStyle,
-  //     ),
-  //     children: [
-  //       ListTile(
-  //         title: Wrap(
-  //           children: [
-  //             Text(
-  //               "this woman\'s tank top is designed to help you\nstay cool. it\'s made of stretchy and breathable\nfabric that moves heat away from your skin\n",
-  //               style: TextStyle(
-  //                 fontSize: 16,
-  //               ),
-  //             ),
-  //             Column(
-  //               children: [
-  //                 buildExpensionTileRow(
-  //                   firstTitle: '.\t\tMaterial',
-  //                   secTitle: "84%\tnylon",
-  //                 ),
-  //                 Row(
-  //                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //                   children: [
-  //                     Text(
-  //                       "16% elastance",
-  //                       style: TextStyle(
-  //                         fontSize: 18.60,
-  //                       ),
-  //                     ),
-  //                   ],
-  //                 ),
-  //                 buildExpensionTileRow(
-  //                   firstTitle: ".\t\tSize",
-  //                   secTitle: "2XS,\tXS, \ts,\tM, \tL",
-  //                 ),
-  //                 buildExpensionTileRow(
-  //                   firstTitle: ".\t\tGender",
-  //                   secTitle: "Woman",
-  //                 ),
-  //                 buildExpensionTileRow(
-  //                   firstTitle: ".\t\tProvince",
-  //                   secTitle: "Balochistan",
-  //                 ),
-  //                 buildExpensionTileRow(
-  //                   firstTitle: ".\t\tCountry",
-  //                   secTitle: "Pakistan",
-  //                 ),
-  //                 MaterialButton(
-  //                   height: 55,
-  //                   elevation: 0,
-  //                   child: Text(
-  //                     "Size guide",
-  //                     style: DetailScreenStyles.sizeGruideTextStyle,
-  //                   ),
-  //                   minWidth: double.infinity,
-  //                   color: AppColors.basewhite60Color,
-  //                   onPressed: () {
-  //                     PageRouting.goToNextPage(
-  //                       context: context,
-  //                       navigateTo: SizeGuideScreen(),
-  //                     );
-  //                   },
-  //                 )
-  //               ],
-  //             )
-  //           ],
-  //         ),
-  //       ),
-  //     ],
-  //   );
-  // }
-
-  // buildAddtoCart() {
-  //   return Padding(
-  //     padding: EdgeInsets.all(16.0),
-  //     child: MaterialButton(
-  //       elevation: 0,
-  //       height: 50,
-  //       color: AppColors.baseDarkGreenColor,
-  //       shape: RoundedRectangleBorder(
-  //           side: BorderSide.none, borderRadius: BorderRadius.circular(5)),
-  //       child: Text(
-  //         "Add to Cart",
-  //         style: DetailScreenStyles.buttonTextStyle,
-  //       ),
-  //       onPressed: () {
-  //         PageRouting.goToNextPage(
-  //           context: context,
-  //           navigateTo: YourBagScreen(
-  //           ),
-  //         );
-  //       },
-  //     ),
-  //   );
-  // }
-
-  // buildBottomGridView() {
-  //   return Container(
-  //     height: 240,
-  //     child: GridView.builder(
-  //       scrollDirection: Axis.horizontal,
-  //       shrinkWrap: true,
-  //       primary: true,
-  //       itemCount: detailScreenData.length,
-  //       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-  //         crossAxisCount: 1,
-  //         childAspectRatio: 1.5,
-  //       ),
-  //       itemBuilder: (context, index) {
-  //         var data = detailScreenData[index];
-  //         return SingleProductWidget(
-  //           onPressed: () {
-  //             PageRouting.goToNextPage(
-  //               context: context,
-  //               navigateTo: DetailScreen(
-  //                 data: data,
-  //               ),
-  //             );
-  //           },
-  //           productImage: data.productImage,
-  //           productModel: data.productModel,
-  //           productName: data.productName,
-  //           productOldPrice: data.productOldPrice,
-  //           productPrice: data.productPrice,
-  //         );
-  //       },
-  //     ),
-  //   );
-  // }
-
-  // buildMayLikeYou() {
-  //   return ListTile(
-  //     leading: Text(
-  //       "You may also like",
-  //       style: DetailScreenStyles.youmayalsolikeTextStyle,
-  //     ),
-  //     trailing: Text(
-  //       "Show All",
-  //       style: DetailScreenStyles.showAllTextStyle,
-  //     ),
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -587,7 +361,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
                 primary: true,
-                // itemCount: detailScreenData.length,
+                 itemCount: detailScreenData.length,
                 // physics: NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1,

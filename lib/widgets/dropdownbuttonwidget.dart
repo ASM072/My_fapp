@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_fapp/styles/detailscreenstyles.dart';
-import 'package:my_fapp/appColors/app_colors.dart';
-import 'package:my_fapp/screens/detailscreen/detailscreen.dart';
+import '../styles/detailscreenstyles.dart';
+import '../appColors/app_colors.dart';
+import '../screens/detailscreen/detailscreen.dart';
 
 class DropDownButtonWidget extends StatefulWidget {
   final String hintText;
