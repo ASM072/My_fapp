@@ -1,11 +1,12 @@
+import 'package:flutter/material.dart';
+
 import '../appColors/app_colors.dart';
 import '../styles/categoryscreenstyles.dart';
-import 'package:flutter/material.dart';
 
 
 
 class CategoryProductWidget extends StatelessWidget {
-CategoryProductWidget(
+const CategoryProductWidget(
   {
     required this.productImage,
     required this.productName,
@@ -24,7 +25,7 @@ final String productName;
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 10,
           right: 20, 
           bottom: 20
@@ -50,7 +51,7 @@ final String productName;
                     productName,
                     style: CategoryScreenStyle.categoryProductNameStyle,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Text(
@@ -63,7 +64,7 @@ final String productName;
             Expanded(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
+                children: const [
                   Icon(
                     Icons.arrow_forward_ios, 
                     color: AppColors.baseBlackColor,

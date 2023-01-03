@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import '../../widgets/Mybuttonwidget.dart';
 import '../../appColors/app_colors.dart';
 import '../../widgets/textfromfieldwidget.dart';
-import '../../styles/login_screenstyle.dart';
 import '../../svgimages/svg_images.dart';
-import '../../widgets/Mybuttonwidget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../styles/signupscreenstyle.dart';
 
@@ -13,7 +11,7 @@ class Signup extends StatelessWidget {
 Widget socialButton({required Widget child, required VoidCallback onPressed}) {
     return MaterialButton(
       shape: OutlineInputBorder(
-        borderSide: BorderSide(
+        borderSide: const BorderSide(
           width: 0.5,
           color: AppColors.baseGrey40Color,
         ),
@@ -47,7 +45,7 @@ Widget socialButton({required Widget child, required VoidCallback onPressed}) {
           obscureText: true,
         ),
         Container(
-          margin: EdgeInsets.symmetric(
+          margin: const EdgeInsets.symmetric(
             horizontal: 20,
             vertical: 10,
           ),
@@ -57,11 +55,11 @@ Widget socialButton({required Widget child, required VoidCallback onPressed}) {
             text: "Create an account",
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height:20,
         ),
         RichText(
-          text: TextSpan(
+          text: const TextSpan(
             text: "By Signing up you agree to our\n\t",
             style: SignUpScreenStyles.signInAgressStyle,
             children: <TextSpan>[
@@ -84,19 +82,19 @@ Widget socialButton({required Widget child, required VoidCallback onPressed}) {
     );
   }
   Widget buildBottomPart(){
-    return Container(
+    return SizedBox(
       height: 300,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Text(
+          const Text(
             "or sign in with social networks",
             style: SignUpScreenStyles.signinsocialStyles,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-      Padding(padding: EdgeInsets.all(10.0),
+      Padding(padding: const EdgeInsets.all(10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -128,13 +126,13 @@ Widget socialButton({required Widget child, required VoidCallback onPressed}) {
         ),
         ),
         Container(
-          margin: EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(20.0),
           child: MaterialButton(
             onPressed: (){},
             color: AppColors.baseGrey10Color,
              height: 55, 
              elevation: 0, 
-          child: Center(
+          child: const Center(
             child: Text(
               "Sign Up",
               style: SignUpScreenStyles.signupbuttonStyle,
@@ -151,7 +149,7 @@ Widget socialButton({required Widget child, required VoidCallback onPressed}) {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         children: [
           buildTopPart(),
           buildBottomPart(),

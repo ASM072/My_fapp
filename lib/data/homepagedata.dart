@@ -1,5 +1,4 @@
 import '../models/singleproductmodel.dart';
-import 'package:flutter/material.dart';
 
 List<SingleProductModel> singleProductData = [
   SingleProductModel(

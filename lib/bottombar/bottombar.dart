@@ -1,22 +1,18 @@
 
-import 'dart:io';
 
-import 'package:flutter/material.dart';
-import 'package:my_fapp/screens/yourbag/youbagscreen.dart';
-import 'package:custom_navigator/custom_navigator.dart';
+// ignore_for_file: import_of_legacy_library_into_null_safe, use_key_in_widget_constructors
+// ignore_for_file: library_private_types_in_public_api, prefer_const_constructors, 
+
 import 'package:custom_navigator/custom_scaffold.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
+import 'package:my_fapp/screens/categoryscreen/categoryscreen.dart';
+import 'package:my_fapp/screens/homepage/homepage.dart';
+import 'package:my_fapp/screens/profilescreen/profilescreen.dart';
+import 'package:my_fapp/screens/wishlist/wishlist.dart';
+import 'package:my_fapp/screens/yourbag/youbagscreen.dart';
 
 import '../appColors/app_colors.dart';
-import 'bottombar.dart';
-import 'package:my_fapp/screens/login_screen/login_screen.dart';
-import '../screens/categoryscreen/categoryscreen.dart';
-import '../screens/homepage/homepage.dart';
-import '../styles/login_screenstyle.dart';
-import '../svgimages/svg_images.dart';
-import '../widgets/Mybuttonwidget.dart';
-import '../widgets/textfromfieldwidget.dart';
-import 'package:my_fapp/screens/categoryscreen/subcategoryscreen.dart';
+
 
 
 
@@ -28,22 +24,15 @@ class BottomBar extends StatefulWidget {
 
 class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     //Homepage Call on Background
     Homepage(),
     CategoryScreen(),
     YourBagScreen(),
-    Text(
-      'Index 3: Favorites',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 4: Person',
-      style: optionStyle,
-    ),
+    WishList(),
+    ProfileScreen(),
   ];
+  
 
   void _onItemTapped(int index) {
     setState(() {

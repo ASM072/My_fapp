@@ -7,5 +7,8 @@ class SvgImages{
   static String heart="images/Heart.svg";
   static String upload="images/Upload.svg";
   static String delete = "images/Trash.svg";
-
- }
+  static String shoppingCart = "images/cart.svg";
+  static String edit = "images/Edit.svg";
+  static String plus = "images/Plus.svg";
+  static String close = "images/Cross.svg";
+}

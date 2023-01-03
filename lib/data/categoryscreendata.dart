@@ -1,8 +1,5 @@
-import '../models/singleproductmodel.dart';
-import '../screens/tabbar/categorytabbar/categoryalltabbar.dart';
-import 'package:flutter/material.dart';
-
 import '../models/categoryproductmodel.dart';
+import '../models/singleproductmodel.dart';
 
 
 

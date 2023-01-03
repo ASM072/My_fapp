@@ -1,10 +1,3 @@
-import 'package:flutter/material.dart';
-import '../screens/homepage/homepage.dart';
-import '../appColors/app_colors.dart';
-import '../data/homepagedata.dart';
-import '../widgets/singleproductwidget.dart';
-import '../screens/tabbar/tabbardata.dart';
-import '../screens/detailscreen/detailscreen.dart';
 
 class SingleProductModel{
 final String productName;

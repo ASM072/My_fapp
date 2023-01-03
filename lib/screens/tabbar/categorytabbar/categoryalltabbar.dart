@@ -1,25 +1,23 @@
 import '../../detailscreen/detailscreen.dart';
 import '../../../routes/routes.dart';
 import '../../../models/singleproductmodel.dart';
-import 'package:my_fapp/widgets/singleproductwidget.dart';
-import 'package:my_fapp/widgets/showallwidget.dart';
+import '../../../widgets/singleproductwidget.dart';
+import '../../../widgets/showallwidget.dart';
 import 'package:flutter/material.dart';
-import 'package:my_fapp/data/categoryscreendata.dart';
-import 'package:my_fapp/data/homepagedata.dart';
-import 'package:my_fapp/models/categoryproductmodel.dart';
+import '../../../data/categoryscreendata.dart';
 
 
 
 class CategoryAllTabBar extends StatelessWidget {
   Widget builderRender({required List<SingleProductModel> singleProduct}) {
-    return Container(
+    return SizedBox(
       height: 250,
       child: GridView.builder(
         itemCount: singleProduct.length,
         shrinkWrap: true,
         primary: true,
         scrollDirection: Axis.horizontal,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 1,
           childAspectRatio: 1.4,
         ),
@@ -46,19 +44,19 @@ class CategoryAllTabBar extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return ListView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       children: [
-        ShowAllWidget(
+        const ShowAllWidget(
           leftText: "Clothing",
         ),
         builderRender(singleProduct: categoryClothData),
-        ShowAllWidget(
+        const ShowAllWidget(
           leftText: "Shoes",
         ),
         builderRender(
           singleProduct: categoryShoesData,
         ),
-        ShowAllWidget(
+        const ShowAllWidget(
           leftText: "Accessories",
         ),
         builderRender(

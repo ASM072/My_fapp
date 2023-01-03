@@ -1,25 +1,14 @@
-import '../../data/categoryscreendata.dart';
-import '../../widgets/categoryproductwidget.dart';
-import '../tabbar/categorytabbar/categoryalltabbar.dart';
-import '../../models/categoryproductmodel.dart';
-import '../tabbar/categorytabbar/categorymantabbar.dart';
-import '../../bottombar/bottombar.dart';
+// ignore_for_file: library_private_types_in_public_api, prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
-import '../login_screen/login_screen.dart';
-import '../signup/signup.dart';
-import '../tabbar/categorytabbar/categorymantabbar.dart';
-import 'package:flutter/material.dart';
-import '../../widgets/Mybuttonwidget.dart';
-import '../../appColors/app_colors.dart';
-import '../../widgets/textfromfieldwidget.dart';
-import '../../styles/login_screenstyle.dart';
-import '../../svgimages/svg_images.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../widgets/Mybuttonwidget.dart';
-import '../homepage/homepage.dart';
-import 'package:custom_navigator/custom_scaffold.dart';
-import 'package:custom_navigator/custom_navigator.dart';
+
+import '../../appColors/app_colors.dart';
+import '../../data/categoryscreendata.dart';
 import '../../styles/categoryscreenstyles.dart';
+import '../../svgimages/svg_images.dart';
+import '../tabbar/categorytabbar/categoryalltabbar.dart';
+import '../tabbar/categorytabbar/categorymantabbar.dart';
 
 
 
@@ -35,13 +24,13 @@ class _CategoryScreenState extends State<CategoryScreen> {
       backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
-      title: Text(
+      title: const Text(
         "Welcome",
         style: CategoryScreenStyle.categoryTitleStyles,
       ),
       actions: [
         RotationTransition(
-          turns: AlwaysStoppedAnimation(90 / 360),
+          turns: const AlwaysStoppedAnimation(90 / 360),
           child: IconButton(
             onPressed: () {},
             icon: SvgPicture.asset(
@@ -60,7 +49,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
           onPressed: () {},
         )
       ],
-      bottom: TabBar(
+      bottom: const TabBar(
         indicator: BoxDecoration(color: Colors.transparent),
         labelStyle: TextStyle(
           fontSize: 16,

@@ -1,5 +1,6 @@
-import '../appColors/app_colors.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../appColors/app_colors.dart';
 
 class LoginScreenStyles{
   static const TextStyle forgotPasswordStyles=TextStyle(

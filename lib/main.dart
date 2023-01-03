@@ -1,19 +1,7 @@
-
-import 'bottombar/bottombar.dart';
+// ignore_for_file: library_private_types_in_public_api, prefer_const_constructors, use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'screens/login_screen/login_screen.dart';
-import 'screens/signup/signup.dart';
-import 'package:flutter/material.dart';
-import 'widgets/Mybuttonwidget.dart';
 import 'appColors/app_colors.dart';
-import 'widgets/textfromfieldwidget.dart';
-import 'styles/login_screenstyle.dart';
-import 'svgimages/svg_images.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'widgets/Mybuttonwidget.dart';
-import 'screens/homepage/homepage.dart';
-import 'screens/detailscreen/detailscreen.dart';
-import 'package:my_fapp/screens/categoryscreen/subcategoryscreen.dart';
+import 'bottombar/bottombar.dart';
 
 
 
@@ -29,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(
             color: AppColors.baseBlackColor,
           ),

@@ -157,8 +157,8 @@ AppBar buildAppBar(){
                   style: ElevatedButton.styleFrom(
                     shape: BeveledRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
-                    ), backgroundColor: AppColors.baseGrey80Color, disabledForegroundColor: Colors.grey.withOpacity(0.38), disabledBackgroundColor: Colors.grey.withOpacity(0.12),
-
+                    ),
+                    primary: AppColors.baseGrey80Color,
                   ),
                   icon: SvgPicture.asset(
                     SvgImages.delete,
@@ -185,7 +185,8 @@ AppBar buildAppBar(){
                   style: ElevatedButton.styleFrom(
                     shape: BeveledRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
-                    ), backgroundColor: AppColors.baseDarkPinkColor, disabledForegroundColor: Colors.grey.withOpacity(0.38), disabledBackgroundColor: Colors.grey.withOpacity(0.12),
+                    ),
+                    primary: AppColors.baseDarkPinkColor,
                   ),
                   icon: SvgPicture.asset(
                     SvgImages.shoppingCart,

@@ -1,7 +1,9 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
-import '../styles/detailscreenstyles.dart';
+
 import '../appColors/app_colors.dart';
-import '../screens/detailscreen/detailscreen.dart';
+import '../styles/detailscreenstyles.dart';
 
 class DropDownButtonWidget extends StatefulWidget {
   final String hintText;
@@ -16,7 +18,7 @@ class _DropDownButtonWidgetState extends State<DropDownButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(10.0),
       child: DropdownButtonFormField<String>(
         decoration: InputDecoration(
             fillColor: AppColors.baseWhiteColor,
@@ -25,14 +27,14 @@ class _DropDownButtonWidgetState extends State<DropDownButtonWidget> {
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(10.0),),),
         hint: Text(
-          "${widget.hintText}",
+          widget.hintText,
           style: DetailScreenStyles.productDropDownStyle,
         ),
         value: widget.ratingController,
         items: widget.item
             .map((e) => DropdownMenuItem(
-                  child: Text(e),
                   value: e,
+                  child: Text(e),
                 ))
             .toList(),
         onChanged: (value) {

@@ -1,6 +1,6 @@
-import '../appColors/app_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../appColors/app_colors.dart';
 
 class HomePageStyles{
   static const TextStyle appBarUpperTitleStyle=TextStyle(

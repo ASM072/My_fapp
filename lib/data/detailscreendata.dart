@@ -1,18 +1,4 @@
-import 'package:flutter/material.dart';
-import '../styles/homepagestyle.dart';
-import '../styles/detailscreenstyles.dart';
-import '../screens/homepage/homepage.dart';
-import '../svgimages/svg_images.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import '../appColors/app_colors.dart';
-import '../widgets/showallwidget.dart';
-import 'homepagedata.dart';
 import '../models/singleproductmodel.dart';
-import 'package:carousel_pro/carousel_pro.dart';
-import '../widgets/singleproductwidget.dart';
-import '../widgets/dropdownbuttonwidget.dart';
-import '../screens/tabbar/tabbardata.dart';
-import '../routes/routes.dart';
 
 
 List<SingleProductModel> detailScreenData = [
